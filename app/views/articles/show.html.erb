@@ -1,0 +1,30 @@
+<div class="mt-4">
+  <% if notice %>
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <%= notice %>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  <%end%>
+  <div>
+      <p>
+        <span style="font-size: 0.8em; color: grey">Created at: <%= @article.created_at %></span> |
+        <span>
+          <%= link_to "", edit_article_path(@article), class: 'bi bi-pencil-square', title: 'edit article' %>
+          <%= link_to "", @article, method: :delete, class: 'bi bi-trash', title: 'delete article' %>
+        </span>
+      </p>
+      <h3>
+        <%= @article.title %>
+      </h3>
+
+      <p>
+        <%= @article.content %>
+      </p>
+    </div>
+
+  <div>
+    
+  <div class="d-flex justify-content-between">
+    <%= link_to "Back to articles", articles_path %>
+  </div>
+</div>
