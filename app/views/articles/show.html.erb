@@ -6,14 +6,17 @@
   </div>
   <%end%>
   <div>
-      <p>
-        <span style="font-size: 0.8em; color: grey">Created at: <%= @article.created_at %></span> |
-        <span>
-          <%= link_to "", edit_article_path(@article), class: 'bi bi-pencil-square', title: 'edit article' %>
-          <%= link_to "", @article, method: :delete, class: 'bi bi-trash', title: 'delete article' %>
-        </span>
-      </p>
-      <h3>
+      <div class="d-flex justify-content-between align-items-center p-2 mb-4" style="background: #eee; border-radius: 0.5em;">
+        <span style="font-size: 0.8em; color: grey">Created at: <%= @article.created_at %></span> 
+        <div class="d-flex gap-1">
+          <%= link_to "", edit_article_path(@article), class: 'btn btn-primary bi bi-pencil-square', title: 'edit article' %>
+          <%= button_to "", @article, method: :delete, data:{
+            turbo_method: :delete,
+            turbo_confirm: 'Are you sure?'
+          }, class: 'btn btn-danger bi bi-trash', title: 'delete article' %>
+        </div>
+      </div>
+      <h3 class="mb-4">
         <%= @article.title %>
       </h3>
 
