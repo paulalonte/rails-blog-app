@@ -1,24 +1,16 @@
-# README
+# Blog application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
 
-Things you may want to cover:
+The application is using Ruby on rails.
 
-* Ruby version
+Features added:
 
-* System dependencies
+- Users can Create a blog
+- Users can Edit a blog
+- Users can Delete a blog
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+# run app
+rails s
+```
