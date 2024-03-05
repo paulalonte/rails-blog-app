@@ -11,15 +11,19 @@
     </div>
   <% end %>
 
-  <div class="mb-3 form-group">
-    <%= form.text_field :title, class: 'form-control', placeholder: 'title', required: true %>
-  </div>
+  
+    <div class="col-6 col-sm-6">
+      <div class="mb-3 form-group">
+        <%= form.text_field :title, class: 'form-control', placeholder: 'title', required: true %>
+      </div>
 
-  <div class="mb-3 form-group">
-    <%= form.text_area :content, class: 'form-control', placeholder: 'Your content...', rows: '6', required: true, html: { whiteSpace: 'pre-wrap', overflowWrap: 'break-word' } %>
-  </div>
+      <div class="mb-3 form-group">
+        <%= form.text_area :content, class: 'form-control', placeholder: 'Your content...', rows: '6', required: true, html: { whiteSpace: 'pre-wrap', overflowWrap: 'break-word' } %>
+      </div>
 
-  <div>
-    <%= form.submit "Submit", class: 'btn btn-primary'%>
-  </div>
+      <div>
+        <%= form.submit "Submit", class: 'btn btn-primary'%>
+      </div>
+    </div>
+  
 <% end %>
