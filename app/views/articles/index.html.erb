@@ -5,10 +5,10 @@
   </div>
   <%end%>
 
-<h1>Articles</h1>
+<h1 class="mb-3">Articles</h1>
 
-<div id="articles">
+<ul class="list-group" id="articles">
   <% @articles.each do |article| %>
     <%= render article %>
   <% end %>
-</div>
+</ul>

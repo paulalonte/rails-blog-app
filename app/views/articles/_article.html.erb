@@ -1,9 +1,4 @@
-<div id="<%= dom_id article %>" class="card" style="width: 18rem; margin-bottom: 2em">
-  <div class="card-body">
-    <h5 class="card-title"><%= article.title %></h5>
-
-    <p>
-      <%= link_to "Read more", article, class: 'btn btn-primary' %>
-    </p>
-  </div>
-</div>
+<li class="list-group-item p-4">
+  <div class="mb-2"><%= article.title %></div>
+  <%= link_to "Read more", article, class: 'btn btn-outline-primary btn-sm' %>
+</li>

@@ -1,2 +1,9 @@
-<h1>Home</h1>
-<p>This is my home page</p>
+<div class="jumbotron">
+    <h1 class="display-4">Hello, everyone!</h1>
+    <p class="lead">This is a simple blog website using Ruby on rails.</p>
+    <hr class="my-4">
+    <p>You can Create, Edit and Delete a blog.</p>
+    <p class="lead">
+      <%= button_to "Create article", new_article_path, method: 'get', class: 'btn btn-primary' %>
+    </p>
+  </div>
