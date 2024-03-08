@@ -22,16 +22,14 @@
       <div class="d-flex justify-content-between">
         <div>
           <p class="mb-0">Author: <%= @article.user.name %></p>
-          <p style="font-size: 0.8em; color: grey">Created at: <%= @article.created_at %></p> 
+          <p style="font-size: 0.8em; color: grey">Created at: <%= @article.created_at.strftime("%Y-%m-%d %H:%M") %></p> 
         </div>
         <div>
           <%= link_to "Back to articles", articles_path, class: 'btn btn-outline-secondary btn-sm' %>
         </div>
       </div>
-      
-
       <p class="mt-4">
-        <%= @article.content %>
+        <%= simple_format(@article.content) %>
       </p>
     </div>
   <div>
