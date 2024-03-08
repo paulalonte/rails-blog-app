@@ -7,6 +7,12 @@
 
 <h1 class="mb-3">Articles</h1>
 
+<% if @articles.length === 0 %>
+  <div class="alert alert-light" role="alert">
+    No Articles to show!
+  </div>
+<% end %>
+
 <ul class="list-group" id="articles">
   <% @articles.each do |article| %>
     <%= render article %>

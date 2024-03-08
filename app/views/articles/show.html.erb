@@ -6,34 +6,33 @@
   </div>
   <%end%>
   <div>
-      <div class="d-flex justify-content-between align-items-center p-2 mb-4" style="background: #eee; border-radius: 0.5em;">
-        <span style="font-size: 0.8em; color: grey">Created at: <%= @article.created_at %></span> 
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3 class="mb-2"><%= @article.title %></h3> 
         <div class="d-flex gap-1">
           <% if @article.user == current_user %>
-          <%= link_to "", edit_article_path(@article), class: 'btn btn-primary bi bi-pencil-square', title: 'edit article' %>
+          <%= link_to "", edit_article_path(@article), class: 'btn btn-light bi bi-pencil-square', title: 'edit article' %>
           <%= button_to "", @article, method: :delete, data:{
             turbo_method: :delete,
             turbo_confirm: 'Are you sure?'
-          }, class: 'btn btn-danger bi bi-trash', title: 'delete article' %>
+          }, class: 'btn btn-light bi bi-trash', title: 'delete article' %>
           <% end %>
         </div>
       </div>
-      <h3 class="mb-4">
-        <%= @article.title %>
-      </h3>
+      <hr>
+      <div class="d-flex justify-content-between">
+        <div>
+          <p class="mb-0">Author: <%= @article.user_id %></p>
+          <p style="font-size: 0.8em; color: grey">Created at: <%= @article.created_at %></p> 
+        </div>
+        <div>
+          <%= link_to "Back to articles", articles_path, class: 'btn btn-outline-secondary btn-sm' %>
+        </div>
+      </div>
+      
 
-      <p>
+      <p class="mt-4">
         <%= @article.content %>
       </p>
-
-      <p>
-        User ID: <%= @article.user_id %>
-      </p>
     </div>
-
   <div>
-    
-  <div class="d-flex justify-content-between">
-    <%= link_to "Back to articles", articles_path %>
-  </div>
 </div>
